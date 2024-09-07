@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVERYDAY GIT</title>
+    <link rel="icon" href="./images/icons8-git-48.png">
+</head>
+<body>
+    <h2>1. Getting Started</h2>
+    <div class="set-up">
+        <ul>
+            <h3> <i>Setting development environment</i></h3>
+        <h3>A. <i>Introduction</i></h3>
+        <p>Before diving into using Git, it's essential to set up your development environment. </p>
+        <p>This includes installing Git, configuring it, and creating the necessary files and folders for your project.</p>
+        <h3>B. <i>Create Your Project Directory</i></h3>
+        <ol>
+            <li>Open your terminal or command prompt.</li>
+            <li>Navigate to the directory where you want to create your project folder:
+                <ul>
+                    <li>
+                        <code>cd path/to/your/projects</code>
+                    </li>
+                </ul>
+            </li>
+            <li>Create a new directory for your project:
+                <ul>
+                    <li>
+                        <code>mkdir my_project</code>
+                    </li>
+                </ul>
+            </li>
+            <li>Move into the new directory:
+                <ul>
+                    <li>
+                        <code>cd my_project</code>
+                    </li>
+                </ul>
+            </li>
+            <li>Open Visual Studio code on the folder that you have navigated using the command below:
+                <ul>
+                    <li>
+                        <code>code .</code>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    <h2>2. What is GIT</h2>
+    <div class="introduction-to-git">
+        <ol>
+            <li><b>Git</b>  is a powerful and widely-used version control system (VCS) that has become an essential tool for developers and teams working on projects of all sizes. <br> It helps manage changes to source code over time, ensuring that everyone involved in a project can collaborate effectively, track changes, and revert to previous versions when necessary.</li>
+            <h3>A. <i>What is a Version Control?</i></h3>
+            <li><p>A <b>version control system</b> is a software tool designed to help teams manage changes to code or documents over time. It tracks every modification made to a file, allowing users to review the history of changes, collaborate with others without conflicts, and restore previous versions of a project if needed. Version control systems are crucial for maintaining the integrity and history of a project, especially when multiple developers are involved.</p></li>
+
+            <h3>B. <i>Other Version Control Systems</i></h3>
+            <p>While <b>Git</b> is the most popular version control system today, it's not the only one. Some other VCS options include:</p>
+            <ul>
+                <li><b>Subversion (SVN):</b> A centralized version control system that stores files and their history on a central server. Developers can check out files from the server, make changes, and commit them back to the server.</li>
+                <li><b>Mercurial:</b> A distributed version control system similar to Git. It offers many of the same features and benefits, but with a different command-line interface and workflow.</li>
+                <li><b>Perforce:</b> A commercial version control system that is popular in the gaming and software development industries. It offers advanced features for managing large codebases and binary files.</li>
+                <li><b>CVS (Concurrent Versions System):</b> An older, centralized VCS that has largely been replaced by more modern systems like Git and SVN.</li>
+            </ul>
+
+            <h3>C. <i>Why Focus on Git and GitHub?</i></h3>
+            <li>In this blog, we'll focus on Git, as it has become the industry standard for version control due to its distributed nature, speed, and flexibility. Additionally, we'll explore GitHub, a popular platform built around Git that provides hosting for Git repositories, collaboration tools, and a social coding environment. GitHub is where millions of developers share, contribute, and collaborate on projects, making it a crucial tool in the modern development landscape.</li>
+            
+    </div>
+    <h2>3. Installing Git</h2>
+    <div class="install-git">
+        <ol>
+        <h3>A. <i></i></h3>
+        <li>We will start by checking if you have git installed already on you computer by running the above command on your terminal or command prompt:
+            <ul>
+                <li>
+                    <code>git --version</code>
+                </li>
+            </ul>
+        </li>
+        <li>If you have git installed, you will see the version number displayed in the terminal. If not, you will  see a fatal error in you command prompt or terminal as shown below:
+            <img src="./images/git not found.jpg"  width="400px">
+        </li>
+        <li>Download the Git installer for your operating system from the official Git website: <a href="https://git-scm.com/downloads">Git Downloads</a></li>
+        <li>Run the installer and follow the on-screen instructions to install Git on your computer.</li>
+        <li>Once the installation is complete, open a new terminal or command prompt window and run the following command to verify that Git is installed:
+            <p><code>git --version</code></p>
+            <li><p>The above code will output the git version if it was installed succesfully as shown below.
+            </p></li>
+            <img src="./images/git version.png"  width="400px">
+        </li>
+    </ol>
+    </div>
+    <h2>4. Configuring Git</h2>
+    <div class="configure-git">
+        <ol>
+            <li>Open a terminal or command prompt window.</li>
+            <li>Set your username by usinng the command <code>git config --global user.name "you username" as shown on the figure below:</code></li>
+            <img src="./images/git name.png"  width="400px">
+            <li>Set your email address by using the command <code>git config --global user.email "you email address" as shown on the figure below:</code></li>
+            <img src="./images/git email.png"  width="400px">
+            <li>You can verify the configuration above by running this command <br>
+            <code>git config user.name</code> for verifying if the name is correct. and <br>
+          <code>git config user.email for checking if the email is correct.</code></li>
+        </ol>    
+    </div>
+    <h2>5. Creating a Git Repository</h2>
+    <div class="create-git-repo">
+        <ol>
+            <h3>A. <i>What is a Git Repository?</i></h3>
+            <p><b>A Git repository</b> is the core of Git, where your project's history and configuration are stored. Think of it as a database that tracks all changes made to the files in your project over time. This repository allows you to manage different versions of your project, collaborate with others, and easily revert to previous states if necessary.</p>
+            <h3>B. <i>How to Initialize Repository.</i></h3>
+            <li>Open your terminal ama command prompt.
+            </li><br>
+            <li>Navigate to the directory where you want to create a new Git repository:
+                <ul>
+                    <li>
+                        <code>cd path/to/your/projects/my_project</code>
+                    </li>
+                </ul>
+            </li>
+            <li>Run the following command to initialize a new Git repository in the current directory:
+                <ul>
+                    <li>
+                        <code>git init</code>
+                    </li>
+                </ul>
+            </li><br>
+            <li>The <code>git init</code> command creates a new Git repository in the current directory, enabling version control for your project.</li><br>
+            <li>After running the above command, you will see a message like this:</li><br>
+            <img src="./images/git init.png"  width="800px">
+        </ol>        
+    </div>
+    <h2>6. Adding file to the staging area.</h2>
+    <div class="staging-area">
+        <ol>
+            <li>Once you’ve initialized a Git repository and started working on your project, the next step is to prepare your files for a commit by adding them to the staging area.</li>
+            <h3>A. <i>What is the Staging Area?</i></h3>
+            <ul>
+            <li>The <b> staging area</b>  is a space where Git collects changes that you want to include in your next commit.
+            It acts as a preparatory step, allowing you to review and selectively commit changes. In other words, the staging area is like a draft version of your commit, where you can add, remove, or modify files before finalizing them.
+           When you add a file to the staging area, Git starts tracking that file, preparing it to be part of the next snapshot (commit) of your project.</li>
+            </ul>
+            <h3>B. <i>Tracked vs. Untracked Files</i></h3>
+            <dl>
+                <dt><b>1. Tracked Files:</b> These are files that Git is already monitoring. They can be in one of the following states:</dt>
+                <dd><b><i>- Unmodified:</i></b> The file has not changed since the last commit.</dd>
+                <dd><b><i>- Modified:</i></b> The file has been changed but not yet staged.</dd>
+                <dd><b><i>- Staged:</i></b> The file has been added to the staging area and is ready to be committed.</dd>
+                <br>
+                <dt><b>2. Untracked Files:</b> These are files that exist in your working directory but are not being tracked by Git yet. When you first add a file to your project directory, it’s considered untracked until you stage it.</dt>
+            </dl>
+            <h3>C. <i>How to add files to staging area</i></h3>
+            <li>To add files to the staging area, use the <code>git add </code> command. You can add individual files by using <code>git add filename.ext</code>, multiple files, or all changes in the directory by using <code>git add .</code></li>
+        </ol>
+    </div>
+</body>
+</html>
